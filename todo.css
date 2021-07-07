@@ -1,0 +1,162 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* all content*/
+.container {
+  margin: 50px auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: 1px solid white;
+  box-sizing: border-box;
+  background-color: white;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(10, 162, 250);
+  height: 800px;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+}
+
+/* task entry */
+.userData {
+  display: flex;
+  width: 80%;
+  margin: 5px auto;
+  padding: 5px;
+}
+#input {
+  width: 100%;
+  height: 40px;
+  padding: 15px;
+  border: 1px solid #ff6633;
+  outline: 0;
+  color: #ff6633;
+  font-weight: 550;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: 0;
+}
+#input::placeholder {
+  color: #ff6633;
+}
+
+.insert {
+  margin: 5px 3px;
+  height: 30px;
+}
+
+#addBtn,
+#saveBtn {
+  margin: 0;
+  padding: 5px;
+  width: 25%;
+  height: 40px;
+  background-color: #ff6633;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+  font-weight: 550;
+  transition: all 0.4s linear;
+}
+#addBtn:hover,
+#saveBtn:hover {
+  cursor: pointer;
+  background-color: #b32d00;
+}
+
+/* task list*/
+table {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-collapse: collapse;
+}
+#listItem {
+  width: 90%;
+}
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: rgb(236, 218, 218);
+}
+
+.tableRow {
+  margin: 2px auto;
+  padding: 1px;
+  width: 50%;
+  height: 50px;
+}
+.sno {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.task {
+  width: 75%;
+}
+.editBtn {
+  margin: 2px;
+  padding-right: 25px;
+}
+.btn1,
+.btn2 {
+  border: none;
+  background-color: white;
+}
+
+.editBtn i {
+  color: blue;
+}
+.editBtn i:hover {
+  color: #00004d;
+  cursor: pointer;
+}
+
+.deleteBtn i {
+  color: red;
+}
+.deleteBtn i:hover {
+  color: #800000;
+  cursor: pointer;
+}
+
+/* mobile CSS*/
+@media screen and (max-width: 475px) {
+  .userData {
+    flex-direction: column;
+    align-items: center;
+  }
+  #input {
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+  #addBtn,
+  #saveBtn {
+    width: 75px;
+    border-radius: 20px;
+  }
+  .container {
+    padding: 2px;
+    width: 85%;
+  }
+  table {
+    width: 100%;
+  }
+}

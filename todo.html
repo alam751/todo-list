@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO-LIST</title>
+    <link rel="stylesheet" href="todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Todo List</h1>
+        <br />
+      </div>
+      <div class="userData">
+        <input
+          type="text"
+          placeholder="Enter your task ..."
+          id="input"
+          class="insert"
+        />
+        <input type="hidden" id="saveIndex" />
+        <button id="addBtn" class="insert btn">Add Task</button>
+        <button id="saveBtn" class="insert btn" style="display: none">
+          Save Task
+        </button>
+      </div>
+      <br />
+
+      <table id="table">
+        <tbody id="listItem">
+          <!--
+          <tr class="tableRow">
+            <td class="sno">1.</td>
+            <td class="task">Dummy task</td>
+            <td class="editBtn">
+              <button class="btn1"><i class="fa fa-edit">Edit</i></button>
+            </td>
+            <td class="deleteBtn">
+              <button class="btn2"><i class="fa fa-trash">Delete</i></button>
+            </td>
+          </tr>
+          -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="todo.js"></script>
+</html>
